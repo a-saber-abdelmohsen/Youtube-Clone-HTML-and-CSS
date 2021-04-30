@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Material Icons' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+
+        function show(){
+    
+          var password= document.getElementById('pass1');
+          confirm= document.getElementById('pass2');
+          image= document.getElementById('eye');
+    
+          if (password.type==="password",confirm.type==="password") {
+            password.type="text";
+            confirm.type="text";
+            image.setAttribute('src', './resources/eyeshow.png');
+    
+          }else if (password.type==="text",confirm.type==="text"){
+            password.type="password";
+            confirm.type="password";
+            image.setAttribute('src', './resources/eyehide.png');
+          }
+        }
+    
+        </script>
+
+  </head>
+  <body>
+    <div class="login-main">
+    <form class="" action="">
+      <div class="login-head">
+        <img src="/resources/googlelogo.png" alt="" class="logo">
+        <h2>Sign in</h2>
+        <h4>to continue to YouTube</h4>
+      </div>
+      
+      <div class="user-name">
+        <input type="username" required>
+        <label>Email or phone</label>
+      </div>
+      
+      <a href="" class="line2">Forget email?</a>
+      <a class="line3">Not your computer? Use Guest mode to sign in privately.</a>
+      <a class="line5">Learn more</a>
+      <a href="./registerationPage.html" class="line4">Create account</a>
+      <input type="submit" value="Next" formaction="./home.html">
+    </form>
+    </div>
+
+    
+  </body>
+</html>

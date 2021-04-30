@@ -1,0 +1,481 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+/* header styling */
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+}
+
+.header i {
+    padding: 0px 7px;
+    cursor: pointer;
+}
+
+.material-icons {
+    color: rgb(96, 96, 96);
+}
+
+.header-left img {
+    width: 85px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    
+}
+
+.header-search form {
+    border: 1px solid #e5e5e5;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+.header-search input {
+    border: none;
+    width: 500px;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.header-search>i {
+    position: relative;
+    top: 8px;
+}
+
+.header-icons .display-this{
+    display: none;
+}
+
+.header-search button {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+
+/* main body styling */
+.mainBody {
+    height: clac(100vh - 70px);
+    display: flex;
+    padding-top: 70px;
+}
+
+/* sidebar styling */
+.sidebar {
+    height: 100%;
+    width: 230px;
+    overflow-y: scroll;
+    background-color: white;
+    position: fixed;
+}
+
+/* .sidebar::-webkit-scrollbar {
+    display: none;
+} */
+
+.sidebar-categories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.sidebar-category {
+    display: flex;
+    align-content: center;
+    padding: 12px 25px;
+}
+
+.sidebar-category span {
+    margin-left: 15px;
+}
+
+.sidebar-category:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+div.subscriptions-label {
+    padding-left: 25px;
+    text-transform: uppercase;
+}
+
+hr {
+    color: #e5e5e5;
+}
+
+/* videos section styling */
+
+.videos {
+    /* 25px + fixed sidebar width */
+    padding-left: 255px;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    overflow-y: scroll;
+}
+
+.videos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.video {
+    width: 260px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 170px;
+}
+
+.video-thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.author img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.video-details {
+    display: flex;
+    margin-top: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h3 {
+    color: rgb(3, 3, 3);
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+
+.title a, span {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(96, 96, 96);   
+}
+
+.videos h1 {
+    font-size: 20px;
+    color: rgb(3, 3, 3);
+    margin-bottom: 10px;
+}
+@media (max-width: 945px) {
+    .header-search input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .sidebar {
+        width: 170px;
+    }
+
+    .videos {
+        padding-left: 195px;
+    }
+
+    .video {
+        width: 250px;
+    }
+}
+
+@media (max-width: 656px){
+    .header-search{
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .videos {
+        padding-left: 25px;
+    }
+
+    .header-icons .display-this {
+        display: inline;
+    }
+
+    .header-icons .dont-display {
+        display: none;
+    }
+}
+
+
+/* Registeration and login page syling */
+
+
+.main form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #9c9c9c;
+    border-radius: 10px;
+    width: 750px;
+    padding: 25px;
+    background: #fff;
+}
+.logo{
+    width: 100px;
+    padding: 5px 0;
+    margin: 0 0 0 -15px;
+}
+
+
+.head{
+    padding-left: 10px;
+}
+
+
+.head h3{
+    margin: 0;
+    font-size: 23px;
+    font-family: jost;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+input{
+    outline: none;
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 35px;
+    font-size: 15px;
+}
+
+input:focus{
+    border: 1.5px solid #1f52f9;
+}
+
+.name{
+    display: inline-block;
+}
+
+input[type="name"]{
+    display: block;
+    margin: 30px 0 0 10px;
+}
+
+input[type="username"]{
+    display: block;
+    width: 390px;
+    margin: 10px 0 0 10px;
+}
+
+.gmail{
+    position: relative;
+    display: block;
+    top: -47px;
+    left: 300px;
+    font-family:roboto;
+    color: #333;
+    font-size: 15px;
+    cursor: default;
+}
+
+.pass{
+    display: inline-block;
+}
+
+.password{
+    display: block;
+    width: 140px;
+    margin: 0 5px 0 10px;
+}
+
+label{
+    position: relative;
+    font-family:roboto;
+    color: #555;
+    font-size: 15px;
+    pointer-events: none;
+    left: 20px;
+    top: -28px;
+    transition: .2s all;
+}
+
+
+input:focus ~label,
+input:valid ~ label{
+    top: -49px;
+    left: 15px;
+    background: #fff;
+    padding: 0 5px;
+    font-size: 10px;
+    color: #1f52f9;
+}
+a{
+    position: relative;
+    font-family: roboto;
+    text-decoration: none;
+    display: block;
+}
+
+.line1{
+    font-size: 12px;
+    margin: -30px 0 0 15px;
+}
+
+.line2{
+    color: #2856ee;
+    font-size: 15px;
+    margin: 20px 0 20px 15px;
+}
+
+.line3{
+    font-size: 12px;
+    margin: -10px 0 0 15px;
+    width: 310px;
+}
+.line4{
+    font-size: 16px;
+    margin: 20px 8px;
+    color: #4971f6;
+    display: inline-block;
+    
+}
+
+.line4:hover {
+    color: #6b89eb;
+}
+
+input[type="submit"]{
+    background:  #4971f6;
+    color: #fff;
+    border: none;
+    padding:10px 30px;
+    border-radius: 5px;
+    margin:  40px 0 30px 180px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover{
+    background: #254fdb;
+}
+
+
+.iconeye{
+    display: inline-block;
+}
+
+#eye{
+    display: block;
+    position: relative;
+    top: -18px;
+    width:27px;
+    cursor: pointer;
+}
+
+.side-image{
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translate(50%,50%);
+}
+
+.side-logo{
+    width: 230px;
+}
+
+.login-head {
+    text-align: center;
+}
+  
+.login-head h2, .login-head h4 {
+    font-weight: normal;
+    margin-left: -10px;
+    margin-bottom:  10px;
+
+}
+
+.login-main form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #9c9c9c;
+    border-radius: 10px;
+    width: 500px;
+    padding: 25px;
+    background: #fff;
+}
+
+.login-main .user-name  label{
+    margin-bottom: 0;
+}
+
+.login-main {
+    color: rgba(26, 23, 23, 0.829);
+}
+
+.login-main .line2 {
+    margin-top: 0;
+    margin-left: 10px;
+    margin-bottom: 60px;
+}
+
+
+.login-main .line3 {
+    margin-top: 0;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+
+
+.login-main .line5 {
+    color: #1f52f9;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
